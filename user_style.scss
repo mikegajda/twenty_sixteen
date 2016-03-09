@@ -1,0 +1,170 @@
+/* User Styles */
+
+div.header_navigation {
+	height: 20px;
+	position: relative;
+ 	}
+div.top_bar {
+	padding: 1% 2%;
+}
+li.header_nav_list{
+	list-style: none;
+	float:left;
+	width: auto;
+	background: #f0f0f0;
+	margin: 12px 6px 12px 0;
+	font-size: 20px;
+	border-radius: 2px;
+	}
+
+li.header_nav_list:hover{
+	background: #000;
+	color: #fff;
+	}
+
+li.header_nav_list:active {
+	top:2px;
+	}
+
+li.header_nav_list a{
+	display: block;
+	color: inherit;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	padding: 8px 15px 8px 15px;
+	}
+
+li.header_nav_list i {
+	font-size: 16px;
+	margin-right: 4px;
+	line-height: 26px;
+	color: inherit;
+	}
+
+li#last {
+	margin-right: 0;
+	}
+
+div.li_container {
+	width: 590px;
+	margin: auto;
+	height: 60px;
+	}
+
+div.logo_container {
+	float:left;
+	width:50px;
+	height: 50px;
+	position:relative;
+	top:5px;
+	left:5px;
+	font-size: 15px;
+	line-height: 50px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+
+	}
+
+a.logo_link {
+	float: left;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	}
+
+.hidden-xs {
+	display: block;
+
+	@media (max-width: 767px) {
+		display: none;
+	}
+}
+
+.visible-xs {
+	display: none;
+
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+
+article {
+     background: #0C7FC8;
+     padding: 2%;
+     margin: 0;
+	}
+
+article.format-link {
+	background: #0C7FC8;
+	}
+
+article.format-image {
+	background: #f0f0f0;
+	}
+
+article.format-image div.post_body {
+	background: #f0f0f0;
+	}
+
+article.category-video {
+	background: #D34952;
+	}
+
+div.article_container {
+	border-radius: 5px;
+	background: #fff;
+	padding: 2%;
+	max-width: 1120px;
+	margin: auto;
+	@media (max-width: 767px) {
+		padding: 1%;
+	}
+}
+
+article .article_date {
+	font-size: 12px;
+	padding: 5px;
+	margin: 0;
+	line-height: 12px;
+}
+@media (max-width: 768px) {
+	div.li_container {
+        width: 255px;
+        float: right;
+      }
+      li.header_nav_list{
+        list-style: none;
+        float:left;
+        width: auto;
+        height: 50px;
+        background: #fff;
+        margin: 5px 2px 5px 0;
+        font-size: 20px;
+        border-radius: 2px;
+        text-align: center;
+        color: #000;
+      }
+      li.header_nav_list a{
+        padding: 5px;
+        font-size: 10px;
+        margin: 0;
+        line-height: 6px;
+      }
+      
+      li.header_nav_list i {
+        font-size: 20px;
+        height: 25px;
+        margin: 3px;
+      }
+}
+

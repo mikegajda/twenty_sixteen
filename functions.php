@@ -138,15 +138,15 @@ add_action( 'after_setup_theme', 'twentysixteen_content_width', 0 );
  * @since Twenty Sixteen 1.0
  */
 function twentysixteen_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'twentysixteen' ),
-		'id'            => 'sidebar-1',
-		'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// register_sidebar( array(
+	// 	'name'          => __( 'Sidebar', 'twentysixteen' ),
+	// 	'id'            => 'sidebar-1',
+	// 	'description'   => __( 'Add widgets here to appear in your sidebar.', 'twentysixteen' ),
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 
 	register_sidebar( array(
 		'name'          => __( 'Content Bottom 1', 'twentysixteen' ),
@@ -405,3 +405,24 @@ function twentysixteen_widget_tag_cloud_args( $args ) {
 	return $args;
 }
 add_filter( 'widget_tag_cloud_args', 'twentysixteen_widget_tag_cloud_args' );
+
+
+if ( ! function_exists( 'twentysixteen_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ * Create your own toolbox_posted_on to override in a child theme
+ *
+ * @since Toolbox 1.2
+ */
+function twentysixteen_posted_on() {
+	printf( __( '<a href="%1$s" title="%1$s" rel="bookmark"><span><i class="icon-time"></i> %2$s on </span><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a>', 'toolbox' ),
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( __( 'View all posts by %s', 'toolbox' ), get_the_author() ) ),
+		esc_html( get_the_author() )
+	);
+}
+endif;
