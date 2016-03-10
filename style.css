@@ -1377,11 +1377,10 @@ blockquote:after,
 
 .entry-header,
 .entry-summary,
-.entry-content,
 .entry-footer,
 .page-content {
-  margin-right: 7.6923%;
-  margin-left: 7.6923%; }
+  margin-right: 0;
+  margin-left: 0; }
 
 .entry-title {
   font-family: 'Open Sans', sans-serif;
@@ -2340,11 +2339,6 @@ p > video {
     width: -webkit-calc(50% - 0.736842105em);
     width: calc(50% - 0.736842105em); }
 
-  .entry-content blockquote:not(.alignleft):not(.alignright),
-  .entry-summary blockquote,
-  .comment-content blockquote {
-    margin-left: -1.473684211em; }
-
   .entry-content blockquote blockquote:not(.alignleft):not(.alignright),
   .entry-summary blockquote blockquote,
   .comment-content blockquote blockquote {
@@ -2760,8 +2754,8 @@ p > video {
   .no-sidebar .page-header,
   .no-sidebar .page-content,
   .no-sidebar .content-bottom-widgets {
-    margin-right: 15%;
-    margin-left: 15%; }
+    margin-right: 0;
+    margin-left: 0; }
 
   .widecolumn {
     padding-right: 15%;
@@ -2942,10 +2936,7 @@ p > video {
     width: 49px; }
 
   body.no-sidebar:not(.search-results) article:not(.type-page) .entry-content {
-    float: left;
-    margin-right: -100%;
-    margin-left: 34.99999999%;
-    width: 50.00000001%; }
+    float: none; }
 
   body.no-sidebar:not(.search-results) article:not(.type-page) .entry-footer {
     margin-right: -100%;
@@ -2988,9 +2979,6 @@ p > video {
     line-height: 1.5217391304;
     margin: 0 0 1.5217391304em;
     padding-left: 1.347826087em; }
-
-  body:not(.search-results) .entry-summary blockquote:not(.alignleft):not(.alignright) {
-    margin-left: -1.52173913em; }
 
   body:not(.search-results) .entry-summary blockquote blockquote:not(.alignleft):not(.alignright) {
     margin-left: 0; }
